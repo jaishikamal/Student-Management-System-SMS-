@@ -149,6 +149,11 @@ const Sidebar = () => {
           icon: <FaFileAlt />
         },
         {
+          path: '/my-exams',
+          label: 'Exam Schedule',
+          icon: <FaExam />
+        },
+        {
           path: '/assignments',
           label: 'All Assignments',
           icon: <FaClipboardList />

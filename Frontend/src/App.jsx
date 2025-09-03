@@ -22,6 +22,11 @@ import Dashboard from './pages/dashboard/Dashboard';
 
 // Students
 import Students from './pages/students/Students';
+import MySubjects from './pages/students/MySubjects';
+import MyAttendance from './pages/students/MyAttendance';
+import MyGrades from './pages/students/MyGrades';
+import MyAssignments from './pages/students/MyAssignments';
+import MyExamSchedule from './pages/students/MyExamSchedule';
 
 // Library Management
 import Library from './pages/library/Library';
@@ -114,6 +119,51 @@ function App() {
             <ProtectedRoute>
               <MainLayout>
                 <Students />
+              </MainLayout>
+            </ProtectedRoute>
+          } />
+
+          {/* Student - My Subjects */}
+          <Route path="/my-subjects" element={
+            <ProtectedRoute allowedRoles={['student']}>
+              <MainLayout>
+                <MySubjects />
+              </MainLayout>
+            </ProtectedRoute>
+          } />
+
+          {/* Student - My Attendance */}
+          <Route path="/my-attendance" element={
+            <ProtectedRoute allowedRoles={['student']}>
+              <MainLayout>
+                <MyAttendance />
+              </MainLayout>
+            </ProtectedRoute>
+          } />
+
+          {/* Student - My Grades */}
+          <Route path="/my-grades" element={
+            <ProtectedRoute allowedRoles={['student']}>
+              <MainLayout>
+                <MyGrades />
+              </MainLayout>
+            </ProtectedRoute>
+          } />
+
+          {/* Student - My Assignments */}
+          <Route path="/my-assignments" element={
+            <ProtectedRoute allowedRoles={['student']}>
+              <MainLayout>
+                <MyAssignments />
+              </MainLayout>
+            </ProtectedRoute>
+          } />
+
+          {/* Student - My Exam Schedule */}
+          <Route path="/my-exams" element={
+            <ProtectedRoute allowedRoles={['student']}>
+              <MainLayout>
+                <MyExamSchedule />
               </MainLayout>
             </ProtectedRoute>
           } />
